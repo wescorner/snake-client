@@ -11,15 +11,12 @@ const setupInput = function (conn) {
 };
 
 const handleUserInput = function (data) {
-	// process.on("SIGINT", () => process.exit());
 	if (data == "\u0003") process.exit();
 	if (data == "w") connection.write("Move: up");
 	if (data == "a") connection.write("Move: left");
 	if (data == "s") connection.write("Move: down");
 	if (data == "d") connection.write("Move: right");
-
-	// process.stdout.write(data);
-	// process.exit();
+	if (data == "f") connection.write("Say: yooo what up");
 };
 
 setupInput();
